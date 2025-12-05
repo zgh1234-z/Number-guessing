@@ -1,19 +1,19 @@
-const number = Number(prompt("یک عدد بین 1 تا 10 حدس بزن "));
-function guessing() {
-  const x = 8;
+const x = 2;
+let i;
 
-  if (number <= 0 || number >= 10) {
-    alert("عدد باید بین 0تا 10 باشد ");
-    // message.style.color = "red";
-    return;
+while (i != x) {
+  let i = Number(prompt("یک عدد بین 0 تا 10 حدس بزن "));
+
+  if (i <= 0 || i >= 10) {
+    alert("عدد باید بین 0 تا 10 باشد ");
   } else {
-    if ((number = x)) {
+    if (i == x) {
       alert("درست حدس زدید ");
-      // message.style.color = "gold";
-      return;
+      break;
+    } else if (i > x) {
+      alert("حدس شما بزرگ تر از عدد مورد نظر  دوباره امتحان کنید ");
     } else {
-      alert("اشتباه حدس زدید دوباره امتحان کنید ");
-      return;
+      alert("حدس شما کوچک تر از عدد مورد نظر دوباره امتحان کنید ");
     }
   }
 }
